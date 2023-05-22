@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ES MI CULPA </title>
+</head>
+<body>
+  <h1>ES MI CULPA</h1>
+  </div>
+    <!-- alerta con color danger con botón de cierre-->
+    <div class="container">
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Cuidado!</strong> esta alerta desaparecerá.
+      </div>
+
+
+<body>
+  <h1>Título de la página</h1>
+  <p>Contenido de la página.</p>
+  
+  <div class="overlay">
+    <div class="popup">
+      <h2>Pop-up</h2>
+      <p>Este es un pop-up de ejemplo.</p>
+      <span class="close">&times;</span>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.close');
+    
+    closeBtn.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
+  </script>
+
+  
+
+
+</body>
+</html>
