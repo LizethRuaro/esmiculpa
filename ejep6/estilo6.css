@@ -1,0 +1,21 @@
+body { 
+  background-color: #134; 
+  overflow: hidden;
+}
+
+.bubble {
+  width: 150px;
+  height: 70px;
+  line-height: 70px;
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  background-color: #ff0000;
+  background-color: #d50000;
+  background-color: #b71c1c;
+  color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  opacity: 0;
+  will-change: transform;
+}

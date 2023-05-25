@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ES MI CULPA </title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>ES MI CULPA</h1>
+  </div>
+  <h1>Título de la página</h1>
+  <p>Contenido de la página.</p>
+
+  <div id="popup-container" class="overlay">
+  </div>
+
+  <!-- alerta con color danger con botón de cierre-->
+  <div class="alert">
+    <span class="close-alert">&times;</span>
+    <strong>Cuidado!</strong> esta alerta desaparecerá.
+  </div>
+
+  <script>
+
+    var container = document.getElementById("popup-container");
+    for (var i = 0; i < 20; i++) {
+      let popup = document.createElement('div');
+      popup.className = "popup";
+      popup.innerHTML = `<h2>Pop-up</h2><p>Este es un pop-up de ejemplo, número ${i}.</p><span class="close-popup" onclick="this.parentElement.style.display='none';">&times;</span>`;
+      popup.id = "popup" + i;
+      container.insertAdjacentElement('beforeend', popup);
+    }
+
+    // const closePopup = document.querySelector('.close-popup');
+    // closePopup.addEventListener('click', function () {
+    //   closePopup.parentElement.parentElement.style.display = 'none';
+    // });
+
+    const closeAlert = document.querySelector('.close-alert');
+    closeAlert.addEventListener('click', function () {
+      closeAlert.parentElement.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
