@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CELLES SIN ESPACIO </title>
+  <link rel="stylesheet" href="estilo.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  h1{
+    text-align: center;
+  }
+</style>>
+</head>
+<body>
+    <!-- alerta con color danger con botón de cierre-->
+<div class="alert">
+    <span class="close-alert">&times;</span>
+    <strong>TRIGGER WARNING</strong> El contenido de esta página es sensible.
+  </div>
+  <div class="container">
+    <h1>CALLES SIN ESPACIOS</h1>
+  </div>
+  <!-- <h1>Título de la página</h1>
+  <p>Contenido de la página.</p>-->
+
+  <!--INSERTAR VIDEO-->
+  <style>
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+<video src="cómo insertar videos con html.mp4" width="810"  height="630"></video>
+
+  <div id="popup-container" class="overlay">
+  </div>
+<iframe width="1190" height="630" src="https://www.youtube.com/embed/VS8ZgYNeMjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  <!-- JS y pop ups -->
+  <script>
+
+    var container = document.getElementById("popup-container");
+    for (var i = 0; i < 3 ; i++) {
+      let popup = document.createElement('div');
+      popup.className = "popup";
+      popup.innerHTML = `<h2>Pop-up</h2><p>Este es un pop-up de ejemplo, número ${i}.</p><span class="close-popup" onclick="this.parentElement.style.display='none';">&times;</span>`;
+      popup.id = "popup" + i;
+      
+
+      container.insertAdjacentElement('beforeend', popup);
+
+    }
+
+    // const closePopup = document.querySelector('.close-popup');
+    // closePopup.addEventListener('click', function () {
+    //   closePopup.parentElement.parentElement.style.display = 'none';
+    // });
+
+    const closeAlert = document.querySelector('.close-alert');
+    closeAlert.addEventListener('click', function () {
+      closeAlert.parentElement.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
